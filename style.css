@@ -17,6 +17,8 @@ body {
   font-family: Arial;
   background: #111;
   color: #fff;
+  max-width:960px;
+  margin: 0 auto;
 }
 
 table {
