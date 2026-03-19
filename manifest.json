@@ -12,8 +12,17 @@
   "start_url": "/",
   "background_color": "#e10600",
   "theme_color": "#e10600",
-  "display": "fullscreen",
+  "display": "standalone",
   "scope": "/",
   "orientation": "portrait-primary",
-  "description": "Resultados, clasificaciones y calendario de la F1 en tiempo real."
+  "description": "Resultados, clasificaciones y calendario de la F1 en tiempo real.",
+  "screenshots": [
+    {
+      "src": "/assets/icons/screenshot.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "Vista principal de la F1 App"
+    }
+  ]
 }
