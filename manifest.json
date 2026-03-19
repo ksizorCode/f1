@@ -3,15 +3,9 @@
   "name": "Formula 1 Hub: Live Stats",
   "icons": [
     {
-      "src": "/icons/icon-192x192.png",
+      "src": "/assets/icon_f1.png",
       "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/icons/icon-512x512.png",
-      "type": "image/png",
-      "sizes": "512x512",
+      "sizes": "1024x1024",
       "purpose": "any maskable"
     }
   ],
@@ -22,17 +16,4 @@
   "scope": "/",
   "orientation": "portrait-primary",
   "description": "Resultados, clasificaciones y calendario de la F1 en tiempo real.",
-  "screenshots": [
-    {
-      "src": "/screenshots/desktop.png",
-      "sizes": "1280x720",
-      "type": "image/png",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/screenshots/mobile.png",
-      "sizes": "750x1334",
-      "type": "image/png"
-    }
-  ]
 }
