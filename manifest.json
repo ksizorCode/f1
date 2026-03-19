@@ -12,8 +12,8 @@
   "start_url": "/",
   "background_color": "#e10600",
   "theme_color": "#e10600",
-  "display": "standalone",
+  "display": "fullscreen",
   "scope": "/",
   "orientation": "portrait-primary",
-  "description": "Resultados, clasificaciones y calendario de la F1 en tiempo real.",
+  "description": "Resultados, clasificaciones y calendario de la F1 en tiempo real."
 }
