@@ -12,12 +12,102 @@
     </header>
     
     <main>
-        <h1>Hola soy una Progresive Web Aplication</h1>
-        <p>Puedo hacer cosas sin depender de la conexion a internet</p>
+    
+
+<h1>🏁 Clasificación F1 2024</h1>
+
+<input type="text" id="buscador" placeholder="🔍 Buscar piloto o equipo...">
+
+<select id="orden">
+  <option value="pos">🏆 Posición</option>
+  <option value="puntos">🔥 Puntos</option>
+</select>
+
+<table border="1" width="100%" id="tablaF1">
+  <thead>
+    <tr>
+      <th>🏆</th>
+      <th>Piloto</th>
+      <th>Equipo</th>
+      <th>🔥 Puntos</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
+
     </main>
 
     <footer>
         <p>&copy; F1</p>
     </footer>
+
+    <script>
+    // 🏎️ Clasificación F1 2024 (ejemplo realista)
+        const clasificacionF1 = [
+        { pos: 1, piloto: "Max Verstappen", equipo: "Red Bull", puntos: 575, pais: "🇳🇱" },
+        { pos: 2, piloto: "Sergio Pérez", equipo: "Red Bull", puntos: 285, pais: "🇲🇽" },
+        { pos: 3, piloto: "Lewis Hamilton", equipo: "Mercedes", puntos: 234, pais: "🇬🇧" },
+        { pos: 4, piloto: "Fernando Alonso", equipo: "Aston Martin", puntos: 206, pais: "🇪🇸" },
+        { pos: 5, piloto: "Charles Leclerc", equipo: "Ferrari", puntos: 206, pais: "🇲🇨" },
+        { pos: 6, piloto: "Lando Norris", equipo: "McLaren", puntos: 205, pais: "🇬🇧" },
+        { pos: 7, piloto: "Carlos Sainz", equipo: "Ferrari", puntos: 200, pais: "🇪🇸" },
+        { pos: 8, piloto: "George Russell", equipo: "Mercedes", puntos: 175, pais: "🇬🇧" },
+        { pos: 9, piloto: "Oscar Piastri", equipo: "McLaren", puntos: 150, pais: "🇦🇺" },
+        { pos: 10, piloto: "Lance Stroll", equipo: "Aston Martin", puntos: 90, pais: "🇨🇦" }
+        ];
+
+
+
+        const tbody = document.querySelector("#tablaF1 tbody");
+const buscador = document.getElementById("buscador");
+const orden = document.getElementById("orden");
+
+// 🧩 Render tabla
+function renderTabla(datos) {
+  tbody.innerHTML = "";
+
+  datos.forEach(p => {
+    tbody.innerHTML += `
+      <tr>
+        <td>🏁 ${p.pos}</td>
+        <td>${p.pais} ${p.piloto}</td>
+        <td>🏎️ ${p.equipo}</td>
+        <td>🔥 ${p.puntos}</td>
+      </tr>
+    `;
+  });
+}
+
+// 🔍 Filtrar
+function filtrarDatos() {
+  const texto = buscador.value.toLowerCase();
+
+  let filtrados = clasificacionF1.filter(p =>
+    p.piloto.toLowerCase().includes(texto) ||
+    p.equipo.toLowerCase().includes(texto)
+  );
+
+  ordenarDatos(filtrados);
+}
+
+// 🔃 Ordenar
+function ordenarDatos(datos) {
+  const tipo = orden.value;
+
+  let ordenados = [...datos].sort((a, b) => {
+    if (tipo === "puntos") return b.puntos - a.puntos;
+    return a.pos - b.pos;
+  });
+
+  renderTabla(ordenados);
+}
+
+// 🎧 Eventos
+buscador.addEventListener("input", filtrarDatos);
+orden.addEventListener("change", () => filtrarDatos());
+
+// 🚀 Inicial
+renderTabla(clasificacionF1);
+    </script>
 </body>
 </html>
