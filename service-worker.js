@@ -6,7 +6,8 @@ const urlsToCache = [
   '/',
   '/index.html',
   '/style.css',
-  '/assets/icons/icon_f1.png'
+  '/assets/icons/icon_f1.png',
+  '/app.js'
 ];
 
 // 🚀 Instalación del Service Worker
