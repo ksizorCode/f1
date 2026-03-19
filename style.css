@@ -6,7 +6,7 @@ html, body {
 
 }
 
-body {
+htnml {
   padding: 
     calc(env(safe-area-inset-top, 0px)+10px)
     calc(env(safe-area-inset-right, 0px)+10px)
@@ -19,6 +19,7 @@ body {
   color: #fff;
   max-width:960px;
   margin: 0 auto;
+  padding:8px 12px;
 }
 
 table {
